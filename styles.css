@@ -1,0 +1,351 @@
+@font-face {
+  font-family: din--heavy;
+  src: url(Fonts/DINNextLTPro-Heavy.otf);
+}
+
+@font-face {
+  font-family: din--medium;
+  src: url(Fonts/DINNextLTPro-Medium.otf);
+}
+
+.main {
+  font-family: din--heavy;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #FFF;
+  margin: 0;
+}
+h3 {
+  color: #cc9966;
+  font-family: din--medium;
+  margin: 0;
+}
+
+.background-image {
+  width: 100%;
+}
+
+.placeholder-image {
+  margin-bottom: -23px;
+  opacity: 0;
+  width: 100%;
+}
+
+.animation--wrapper.activate {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cup-hoist, .confetti {
+  bottom: -110%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 35%;
+}
+
+.confetti {
+  width: 80%;
+}
+
+.slideIn--left, .slideIn--right {
+  position: absolute;
+  top: 0;
+  left: -78%;
+  width: 80%;
+}
+
+.slideIn--right {
+  left: auto;
+  right: -78%;
+}
+
+.intimidator {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.intimidator span {
+  color: #FFF;
+  display: block;
+  opacity: 0;
+}
+
+.intimidator .intimidator--one {
+  font-size: 6rem;
+  line-height: 4.5rem;
+}
+
+.intimidator .intimidator--game {
+  font-size: 4.5rem;
+  line-height: 4rem;
+}
+
+.intimidator .intimidator--glory {
+  font-size: 2.5rem;
+  line-height: 1.8rem;
+}
+
+.crest--left, .crest--right {
+  left: -30%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46%;
+}
+
+.crest--right {
+  left: auto;
+  right: -30%;
+}
+
+.cup-hoist.activate {
+  bottom: 0;
+  transition: bottom 1.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.confetti.activate {
+  bottom: 0;
+  transition: 0.8s 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%;
+}
+
+.slideIn--left.activate {
+  left: 0;
+
+  transition: left 1.2s 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slideIn--right.activate {
+  right: 0;
+
+  transition: right 1.2s 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.intimidator .intimidator--one.activate {
+  font-size: 7rem;
+  opacity: 1;
+  transition: opacity 0.3s 2.2s, font-size 0.5s 2.2s;
+}
+
+.intimidator .intimidator--game.activate {
+  font-size: 5rem;
+  opacity: 1;
+  transition: opacity 0.3s 2.8s, font-size 0.4s 2.8s;
+}
+
+.intimidator .intimidator--glory.activate {
+  font-size: 2.8rem;
+  opacity: 1;
+  transition: opacity 0.5s 3.3s, font-size 0.3s 3.3s;
+}
+
+.crest--left.activate, .crest--right.activate {
+  left: 15%;
+  opacity: 1;
+  transition: opacity 3s 3.8s cubic-bezier(0.19, 1, 0.22, 1), left 2s 4.2s cubic-bezier(0.19, 1, 0.22, 1), top 2s 3.8s cubic-bezier(0.19, 1, 0.22, 1), width 1.3s 4.2s cubic-bezier(0.19, 1, 0.22, 1);
+  top: 47%;
+  width: 17%;
+}
+
+.crest--right.activate {
+  left: auto;
+  right: 13%;
+  transition: opacity 3s 3.8s cubic-bezier(0.19, 1, 0.22, 1), right 2s 4.2s cubic-bezier(0.19, 1, 0.22, 1), top 2s 3.8s cubic-bezier(0.19, 1, 0.22, 1), width 1.3s 4.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slideIn--left.deactivate, 
+.crest--left.deactivate {
+  left: -75%;
+  transition: left 1s 0.2s;
+}
+
+.slideIn--right.deactivate, 
+.crest--right.deactivate{
+  right: -75%;
+  transition: right 1s 0.2s;
+}
+
+.cup-hoist.deactivate, .confetti.deactivate {
+  opacity: 0;
+}
+
+.intimidator.deactivate {
+  opacity: 0;
+  transition: opacity 0.5s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.hidden-info--wrapper, .hidden-info {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hidden-info--wrapper.activate {
+  opacity: 1;
+}
+
+.hidden-info {
+  font-size: 11px;
+  opacity: 1;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.hidden-info span {
+  background-color: #FFF;
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 0.25rem;
+}
+
+.hidden-info .event-date {
+  background: transparent;
+  border-right: 3px solid #cc9966;
+  font-family: din--medium;
+  line-height: 10px;
+  margin: 0.5rem 0.5rem 1rem 0;
+  padding-right: 0.5rem;
+  text-transform: none;
+}
+
+.trophy, .black-backdrop {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.black-backdrop {
+  width: 63%;
+}
+
+.vector {
+  fill: #FFF;
+  height: 8%;
+  padding: 0 7px;
+  width: 8%;
+}
+
+.trophy-logo {
+  bottom: 2rem;
+  display: none;
+  left: 1rem;
+  position: absolute;
+  width: 20%;
+}
+
+.hotspot {
+  position: absolute;
+  right: 20%;
+  top: 8%;
+  transition: 0.4s;
+  width: 6%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.hotspot.activate {
+ opacity: 1;
+ transition: 0.5s 0.5s;
+}
+
+.hotspot:hover {
+  transform: rotate(90deg);
+  transition: 0.4s;
+}
+
+.hotspot.clicked {
+  transform: rotate(135deg);
+  transition: 0.4s;
+}
+
+.video {
+  opacity: 0;
+  position: absolute;
+  right: 22%;
+  top: 14%;
+  width: 33%;
+}
+
+.hidden-info .video--cta {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 13px;
+  position: absolute;
+  right: -5%;
+  top: 22%;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  width: 33%;
+}
+
+.video.playing {
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 5;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 3.5%;
+  opacity: 0;
+}
+
+.closeBtn.activate {
+  opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .trophy-logo {
+    display: block;
+  }
+
+  .hidden-info span {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .hidden-info {
+    font-size: 14px;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .hidden-info {
+    font-size: 16px;
+  }
+
+  .hidden-info span {
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+  }
+}
+
+
+
+
+
+
