@@ -1,11 +1,11 @@
 @font-face {
   font-family: din--heavy;
-  src: url(Fonts/DINNextLTPro-Heavy.otf);
+  src: url(fonts/DINNextLTPro-Heavy.otf);
 }
 
 @font-face {
   font-family: din--medium;
-  src: url(Fonts/DINNextLTPro-Medium.otf);
+  src: url(fonts/DINNextLTPro-Medium.otf);
 }
 
 .main {
